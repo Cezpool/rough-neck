@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="dgrey">
+    <ion-title>Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-style" padding>
+
+  <div class="left">
+    <p>&ensp;Latitude:</p>
+    <p>&ensp;Longitude:</p>
+    <p>&ensp;Altitude:</p>
+    <p>&ensp;Speed:</p>
+    <p>&ensp;Bearing:</p>
+  </div>
+  <div class="right">
+    <p>{{ lat }}</p>
+    <p>{{ lng }}</p>
+    <p>{{ alt }}</p>
+    <p>{{ spd }}</p>
+    <p>{{ brg }}</p>
+  </div>
+  <br>
+  <br> 
+  <ion-item no-lines>
+    <ion-label color="dark">Satellites</ion-label>
+    <ion-toggle [(ngModel)]="satellites" checked="true" class="myClass"></ion-toggle>
+  </ion-item>
+  <span class="satBorder"></span>
+  <br>
+  <div class="satdat">Insert Satellite data here and bind to toggle switch.</div>
+</ion-content>
